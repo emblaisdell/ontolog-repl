@@ -5,7 +5,7 @@ SPACING = 0
 API_ENDPOINT = "http://ecs-modulus-cluster-11369770.us-east-1.elb.amazonaws.com:8080/runPhoenicia"
 
 os.system("clear") # clear screen
-print("\033[32m") # make green
+print("", end="\033[32m") # make green
 
 while True:
     line = input(" "*SPACING)
@@ -19,4 +19,4 @@ while True:
     #     SPACING-=1
     else:
         out = requests.post(API_ENDPOINT,line)
-        print(" "*SPACING+out.content.decode("utf-8"))
+        print(" "*SPACING+out.content.decode("utf-8"),end="\n\033[32m")
