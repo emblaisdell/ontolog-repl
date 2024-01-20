@@ -12,6 +12,5 @@ while True:
     elif line=="out":
         SPACING-=1
     else:
-        print(" "*SPACING+line)
-        #out = requests.post(API_ENDPOINT,line)
-        #print(" "*SPACING+str(out.content))
+        out = requests.post(API_ENDPOINT,line)
+        print(" "*SPACING+out.content.decode("utf-8"))
