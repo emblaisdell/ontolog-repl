@@ -1,7 +1,7 @@
 import requests
 import os
 
-SPACING = 0
+SPACING = 1
 API_ENDPOINT = "http://ecs-modulus-cluster-11369770.us-east-1.elb.amazonaws.com:8080/runPhoenicia"
 
 os.system("clear") # clear screen
@@ -12,10 +12,10 @@ while True:
         break
     elif line=="":
         continue
-    # elif line=="in":
-    #     SPACING+=1
-    # elif line=="out":
-    #     SPACING-=1
+    elif line=="in":
+        SPACING+=1
+    elif line=="out":
+        SPACING-=1
     else:
         out = requests.post(API_ENDPOINT,line)
         print(" "*SPACING+out.content.decode("utf-8"))
