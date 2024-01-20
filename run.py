@@ -1,7 +1,10 @@
 import requests
+import os
 
 SPACING = 0
 API_ENDPOINT = "http://ecs-modulus-cluster-11369770.us-east-1.elb.amazonaws.com:8080/runPhoenicia"
+
+os.execl("/usr/bin/clear")
 
 while True:
     line = input(" "*SPACING)
