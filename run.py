@@ -7,6 +7,8 @@ while True:
     line = input(" "*SPACING)
     if line=="exit":
         break
+    elif line=="":
+        continue
     elif line=="in":
         SPACING+=1
     elif line=="out":
