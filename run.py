@@ -17,5 +17,6 @@ while True:
     elif line=="out":
         SPACING-=1
     else:
+        print(" "*SPACING,end="")
         out = requests.post(API_ENDPOINT,line)
-        print(" "*SPACING+out.content.decode("utf-8"))
+        print(out.content.decode("utf-8"))
